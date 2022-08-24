@@ -1,0 +1,38 @@
+@use '../../styles/' as *;
+
+.video-description {
+  grid-area: C;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.video-description__title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid $lines-gray;
+}
+
+.video-description__abstract {
+  margin-block: 16px 32px;
+}
+
+.video-description__professor {
+  width: 332px;
+  display: flex;
+align-items: center;
+justify-content: center;
+  margin-bottom: 56px;
+}
+
+.video-description__professor-photo {
+  margin-right: 24px;
+}
+
+.video-description__professor-informations {
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}

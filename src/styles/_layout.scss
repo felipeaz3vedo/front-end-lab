@@ -1,0 +1,14 @@
+
+.layout {
+  display: grid;
+  grid-template-columns: 800px 385px;
+  
+  gap: 16px 32px;
+ 
+
+  grid-template-areas: 
+  "A B"
+  "C B";
+
+  margin: 0 auto;
+}
