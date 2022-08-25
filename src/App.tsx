@@ -1,5 +1,6 @@
 import './App.scss';
 import { Description } from './components/Description';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { Video } from './components/Video';
@@ -17,6 +18,7 @@ export function App() {
           <Description />
         </div>
       </div>
+      <Footer />
     </>
   );
 }

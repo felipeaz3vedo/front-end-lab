@@ -1,0 +1,41 @@
+@use '../../styles/' as *;
+
+footer {
+  border-top: 1px solid $lines-gray;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__informations {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 40px 0 40px 16px;
+
+  width: 440px;
+  height: 29px;
+}
+
+.footer__informations-logo {
+  margin-right: 24px;
+
+  p {
+    color: $footer-gray;
+  }
+}
+
+.footer__social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+
+  a:first-child {
+    margin-right: 24px;
+  }
+}
+
