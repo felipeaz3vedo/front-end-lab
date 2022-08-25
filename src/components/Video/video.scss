@@ -3,6 +3,9 @@
 .video {
   margin-top: 40px;
   grid-area: A;
-  background-color: white;
-  height: 385px;
+  width: 100%;
+ 
+  img {
+    width: 100%;
+  }
 }

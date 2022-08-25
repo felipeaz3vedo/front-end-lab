@@ -1,5 +1,7 @@
 import './description.scss';
 import professorPhoto from '../../assets/professor-photo.jpeg';
+import notionIcon from '../../assets/notion-icon.svg';
+import talkIcon from '../../assets/talk-icon.svg';
 
 export function Description() {
   return (
@@ -7,13 +9,14 @@ export function Description() {
       <div className="video-description">
         <div>
           <h2 className="video-description__title">
-            01 - Introdução à lógica de programação
+            Introdução à lógica de programação
           </h2>
         </div>
         <div>
           <h3 className="video-description__abstract">
-            lorem Ipsl um lorem Ipsluml orem Ipslu mlorem Ipsluml orem Ips lu
-            mlorem Ipslumlorem Ipslumlorem Ipslumlorem mlorem Ipslumlorem.
+            Nessa primeira aula veremos alguns conceitos básicos sobre
+            linguagens de programação. Além disso, será apresentado a
+            peseudolinguagem utilizada na disciplina, o Potigol.
           </h3>
         </div>
         <div className="video-description__professor">
@@ -26,12 +29,16 @@ export function Description() {
             <p>Front-end Developer @felipeazevedo1991</p>
           </div>
         </div>
+        <div className="video-description__assets">
+          <a className="video-description__assets-extra" href="#">
+            <img src={notionIcon} alt="logomarca do notion" />
+            material complementar
+          </a>
+          <a className="video-description__assets-talk" href="#">
+            <img src={talkIcon} alt="Icone fale comigo" />
+          </a>
+        </div>
       </div>
-
-      {/* <div className='video-description__resources'>
-      <div className='video-description__extra-material'></div>
-      <div className="video-description__challenge"></div>
-    </div> */}
     </>
   );
 }

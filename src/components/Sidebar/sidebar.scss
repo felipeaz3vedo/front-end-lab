@@ -1,8 +1,12 @@
 @use '../../styles/' as *;
 
 .sidebar {
-  margin-top: 40px;
   grid-area: B;
-  background-color: rgb(117, 22, 22);
 
+  margin-top: 40px;
+
+  border: 1px solid $lines-gray;
+  border-bottom: 0;
+
+  height: auto;
 }
