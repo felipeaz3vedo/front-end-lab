@@ -1,15 +1,12 @@
-
 .layout {
   display: grid;
-  grid-template-columns: 832px 385px;
-  
-  gap: 32px 0;
- 
+  grid-template-columns: 3fr 385px;
 
-  grid-template-areas: 
-  "A B"
-  "C B";
+  gap: 32px 0;
+
+  grid-template-areas:
+    'A B'
+    'C B';
 
   margin: 0 auto;
 }
-
