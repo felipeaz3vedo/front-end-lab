@@ -10,12 +10,12 @@ export function Lesson() {
   console.log(watched);
 
   return (
-    <div className="lesson">
+    <a href="#" className="lesson">
       <button onClick={() => setWatched(!watched)}>
         {watched ? (
           <RiCheckboxCircleFill size={16} color="#0096fb" />
         ) : (
-          <FiCircle size={16} color="#29292e"/>
+          <FiCircle size={16} color="#29292e" />
         )}
       </button>
 
@@ -23,16 +23,16 @@ export function Lesson() {
         <h2>Introdução a lógica de programação</h2>
         <div className="lesson__informations">
           <span>
-            <BsPlay color="#29292e" />
+            <BsPlay />
             <p>01</p>
           </span>
 
           <span>
-            <MdTimer color="#29292e" />
+            <MdTimer />
             <p>03:43</p>
           </span>
         </div>
       </div>
-    </div>
+    </a>
   );
 }

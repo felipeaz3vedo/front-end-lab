@@ -1,6 +1,7 @@
 import './footer.scss';
 import githubIcon from '../../assets/github-icon.svg';
 import linkedinIcon from '../../assets/linkedin-icon.svg';
+import { AiFillInstagram } from 'react-icons/ai';
 
 export function Footer() {
   return (
@@ -12,10 +13,13 @@ export function Footer() {
         </div>
         <div className="footer__social-links">
           <a href="#">
-            <img src={githubIcon}alt="" />
+            <img src={githubIcon} alt="" />
           </a>
           <a href="#">
             <img src={linkedinIcon} alt="" />
+          </a>
+          <a href="#">
+            <AiFillInstagram size={40} />
           </a>
         </div>
       </div>
