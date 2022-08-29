@@ -5,22 +5,27 @@ import { BsPlay } from 'react-icons/bs';
 import { RiCheckboxCircleFill } from 'react-icons/ri';
 import { useState } from 'react';
 
-export function Lesson() {
+interface Lessonprops {
+  title: string;
+  position: number;
+  duration: string;
+}
+
+export function Lesson(props: Lessonprops) {
   const [watched, setWatched] = useState(false);
-  console.log(watched);
 
   return (
     <a href="#" className="lesson">
       <button onClick={() => setWatched(!watched)}>
         {watched ? (
-          <RiCheckboxCircleFill size={16} color="#0096fb" />
+          <RiCheckboxCircleFill size={18} color="#0096fb" />
         ) : (
-          <FiCircle size={16} color="#29292e" />
+          <FiCircle size={18} color="#29292e" />
         )}
       </button>
 
       <div>
-        <h2>Introdução a lógica de programação</h2>
+        <h2>{props.title}</h2>
         <div className="lesson__informations">
           <span>
             <BsPlay />
@@ -29,7 +34,7 @@ export function Lesson() {
 
           <span>
             <MdTimer />
-            <p>03:43</p>
+            <p>{props.duration}</p>
           </span>
         </div>
       </div>

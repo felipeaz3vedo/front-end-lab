@@ -14,7 +14,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin: 40px 0 40px 16px;
+  // margin: 40px 0 40px 16px;
+  margin-block: 40px;
 
   width: 440px;
   height: 29px;
@@ -34,8 +35,15 @@ footer {
   justify-content: center;
   margin-right: 16px;
 
+  img {
+    transition: 0.3s ease;
+  }
+
+  img:hover {
+    opacity: 0.5;
+  }
+
   a:first-child {
-    margin-right: 24px;
+    margin-right: 16px;
   }
 }
-

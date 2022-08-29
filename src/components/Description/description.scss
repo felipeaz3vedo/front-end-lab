@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  margin-left: 16px;
+  // margin-left: 16px;
 }
 
 .description__abstract {
@@ -75,8 +75,13 @@
   font-size: 14px;
   font-weight: 700;
 
+  transition: 0.3s ease;
+
   img {
     margin-right: 8px;
+  }
+  &:hover {
+    opacity: 0.8;
   }
 }
 
