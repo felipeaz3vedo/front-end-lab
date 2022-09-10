@@ -1,11 +1,11 @@
-import { FiCircle } from 'react-icons/fi';
-import { MdTimer } from 'react-icons/md';
-import { BsPlay } from 'react-icons/bs';
-import { RiCheckboxCircleFill } from 'react-icons/ri';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useVideoData } from '../../hooks/useVideoData';
-//custom path
+import { useState } from 'react';
+
+import { Link } from 'react-router-dom';
+
+import { FiCircle } from 'react-icons/fi';
+import { RiCheckboxCircleFill } from 'react-icons/ri';
+
 import './lesson.scss';
 
 interface LessonProps {
@@ -35,18 +35,9 @@ export function Lesson(props: LessonProps) {
       </button>
 
       <div>
-        <h2>{props.title}</h2>
-        <div className="lesson__informations">
-          <span>
-            <BsPlay />
-            <p>{props.position + 1}</p>
-          </span>
-
-          <span>
-            <MdTimer />
-            <p>10:42</p>
-          </span>
-        </div>
+        <h2>
+          {props.position < 10 ? `0${props.position + 1}` : props.position + 1}. {props.title}
+        </h2>
       </div>
     </Link>
   );

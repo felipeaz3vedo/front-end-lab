@@ -3,6 +3,7 @@ import { useVideoData } from '../../hooks/useVideoData';
 
 export function Video() {
   const { currentData } = useVideoData();
+
   return (
     <div className="video">
       <iframe
