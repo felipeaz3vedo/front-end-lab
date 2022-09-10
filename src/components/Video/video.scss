@@ -4,8 +4,10 @@
   margin-top: 40px;
   grid-area: A;
   width: 100%;
- 
-  img {
+
+  .iframe {
+    aspect-ratio: 16/9;
     width: 100%;
+    
   }
 }

@@ -1,10 +1,17 @@
 import './video.scss';
-import video from '../../assets/video.svg';
+import { useVideoData } from '../../hooks/useVideoData';
 
 export function Video() {
+  const { currentData } = useVideoData();
   return (
     <div className="video">
-      <img src={video} alt="" />
+      <iframe
+        className="iframe"
+        src={`https://www.youtube.com/embed/${currentData.videoId}?modestbranding=1&showinfo=0&rel=0`}
+        frameBorder="0"
+        allow="accelerometer; clipboard-write; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
     </div>
   );
 }

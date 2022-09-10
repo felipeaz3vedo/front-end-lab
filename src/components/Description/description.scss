@@ -1,90 +1,91 @@
 @use '../../styles/' as *;
 
 .description {
-  grid-area: C;
+    grid-area: C;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-  // margin-left: 16px;
-}
+    // margin-left: 16px;
+    &__abstract {
+        margin-block: 16px 32px;
+    }
 
-.description__abstract {
-  margin-block: 16px 32px;
-}
+    &__professor {
+        width: 332px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
 
-.description__professor {
-  width: 332px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
-}
+    &__professor-photo {
+        margin-inline: 16px 24px;
 
-.description__professor-photo {
-  margin-inline: 16px 24px;
+        img {
+            width: 56px;
+            height: 56px;
+            border: 2px solid $brand-blue;
+            border-radius: 28px;
+        }
+    }
 
-  img {
-    width: 64px;
-    height: 64px;
-    border: 2px solid $brand-blue;
-    border-radius: 32px;
-  }
-}
+    &__professor-informations {
+        align-self: center;
 
-.description__professor-informations {
-  align-self: center;
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+    }
 
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-}
-.description__assets {
-  width: 100%;
-  height: 93px;
-  border: 1px solid $lines-gray;
-  border-right: 0;
+    &__assets {
+        width: 100%;
+        height: 93px;
+        border: 1px solid $lines-gray;
+        border-right: 0;
 
-  margin-bottom: 32px;
+        margin-bottom: 32px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-.description__assets-extra {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    &__assets-extra {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-  background-color: $brand-blue;
+        background-color: $brand-blue;
 
-  text-transform: uppercase;
-  color: black;
+        text-transform: uppercase;
+        color: black;
 
-  width: auto;
-  height: 40px;
+        width: auto;
+        height: 40px;
 
-  padding: 12px;
+        padding: 12px;
 
-  border-radius: 4px;
+        border-radius: 4px;
 
-  margin: 25px 0 25px 16px;
+        margin: 25px 0 25px 16px;
 
-  font-size: 14px;
-  font-weight: 700;
+        font-size: 14px;
+        font-weight: 700;
 
-  transition: 0.3s ease;
+        transition: 0.3s ease;
 
-  img {
-    margin-right: 8px;
-  }
-  &:hover {
-    opacity: 0.8;
-  }
-}
+        &:hover {
+            opacity: 0.5;
+        }
 
-.description__assets-talk {
-  margin-right: 16px;
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    &__assets-talk {
+        margin-right: 16px;
+    }
 }

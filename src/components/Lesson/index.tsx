@@ -1,21 +1,31 @@
-import './lesson.scss';
 import { FiCircle } from 'react-icons/fi';
 import { MdTimer } from 'react-icons/md';
 import { BsPlay } from 'react-icons/bs';
 import { RiCheckboxCircleFill } from 'react-icons/ri';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useVideoData } from '../../hooks/useVideoData';
+//custom path
+import './lesson.scss';
 
-interface Lessonprops {
+interface LessonProps {
   title: string;
   position: number;
-  duration: string;
+  description: string;
+  videoId: string;
 }
 
-export function Lesson(props: Lessonprops) {
+export function Lesson(props: LessonProps) {
   const [watched, setWatched] = useState(false);
 
+  const { setCurrentData } = useVideoData();
+
   return (
-    <a href="#" className="lesson">
+    <Link
+      to={`/course/lesson/${props.videoId}`}
+      className="lesson"
+      onClick={() => setCurrentData(props)}
+    >
       <button onClick={() => setWatched(!watched)}>
         {watched ? (
           <RiCheckboxCircleFill size={18} color="#0096fb" />
@@ -29,15 +39,15 @@ export function Lesson(props: Lessonprops) {
         <div className="lesson__informations">
           <span>
             <BsPlay />
-            <p>01</p>
+            <p>{props.position + 1}</p>
           </span>
 
           <span>
             <MdTimer />
-            <p>{props.duration}</p>
+            <p>10:42</p>
           </span>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

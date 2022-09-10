@@ -1,41 +1,37 @@
-import './sidebar.scss';
 import { Lesson } from '../Lesson';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useVideoData } from '../../hooks/useVideoData';
+
 import api from '../../services/api';
 
-interface Video {
-  contentDetails: {
-    duration: string;
-  };
-  id: string;
-  snippet: {
-    title: string;
-    position: number;
-    description: string;
-    resourceId: {
-      videoId: string;
-    };
-  };
-}
+import './sidebar.scss';
 
 export function Sidebar() {
-  const [data, setData] = useState<Video[]>([]);
+  const { data, setData, setCurrentData } = useVideoData();
 
   useEffect(() => {
     api
       .get('/playlistItems', {
         params: {
           key: import.meta.env.VITE_API_KEY,
-          part: 'snippet, contentDetails',
-          maxResults: 50,
-          playlistId: 'PLx3SBPKiFL6woOLRMt4MgsdSVFO5pXwXV'
+          part: 'snippet',
+          playlistId: import.meta.env.VITE_PLAYLIST_ID
         }
       })
       .then(response => {
         setData(response.data.items);
-      });
+        const formattedCurrentData = {
+          title: response.data.items[0].snippet.title,
+          position: response.data.items[0].snippet.position,
+          description: response.data.items[0].snippet.description,
+          videoId: response.data.items[0].snippet.resourceId.videoId
+        };
+
+        setCurrentData(formattedCurrentData);
+      })
+      .catch(err => console.log(err));
   }, []);
-  console.log(data);
+
   return (
     <div className="sidebar">
       {data.map(video => {
@@ -44,7 +40,8 @@ export function Sidebar() {
             key={String(video.id)}
             title={video.snippet.title}
             position={video.snippet.position}
-            duration={video.contentDetails.duration}
+            videoId={video.snippet.resourceId.videoId}
+            description={video.snippet.description}
           />
         );
       })}
