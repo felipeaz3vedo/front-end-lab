@@ -12,7 +12,9 @@ export function Description() {
     <>
       <div className="description">
         <div>
-          <h2 className="description__title">{currentData.title}</h2>
+          <h2 className="description__title">
+            {currentData.position + 1}. {currentData.title}
+          </h2>
         </div>
         <div>
           <h3 className="description__abstract">{currentData.description}</h3>

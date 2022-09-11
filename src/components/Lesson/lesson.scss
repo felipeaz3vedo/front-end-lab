@@ -1,56 +1,56 @@
 @use '../../styles/' as *;
 
 .lesson {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 20px 32px;
-    border-bottom: 1px solid $lines-gray;
-    transition: 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 40px;
+  border-bottom: 1px solid $lines-gray;
+  transition: 0.3s ease;
 
-    &:hover {
-        background-color: $secondary-gray-dark;
+  &:hover {
+    background-color: $secondary-gray-dark;
 
-        .lesson__informations svg {
-            fill: $secondary-gray;
-        }
+    .lesson__informations svg {
+      fill: $secondary-gray;
     }
+  }
 
-    button {
-        border: none;
-        background: none;
-        margin-right: 16px;
-        align-self: flex-start;
-    }
+  button {
+    border: none;
+    background: none;
+    margin-right: 16px;
+    align-self: flex-start;
+  }
 
-    h2 {
-        font-size: 14px;
-        color: #c4c4cc;
-        margin-bottom: 8px;
-        font-weight: 500;
-    }
+  h2 {
+    font-size: 14px;
+    color: #c4c4cc;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
 
-    p {
-        font-size: 12px;
-        font-weight: 700;
-        color: $secondary-gray;
-    }
+  p {
+    font-size: 12px;
+    font-weight: 700;
+    color: $secondary-gray;
+  }
 }
 
 .lesson__informations {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    margin-right: 12px;
+    align-items: flex-start;
 
-    span {
-        display: flex;
-        margin-right: 12px;
-        align-items: flex-start;
-
-        svg {
-            margin-right: 4px;
-            fill: $lines-gray;
-        }
+    svg {
+      margin-right: 4px;
+      fill: $lines-gray;
     }
+  }
 }

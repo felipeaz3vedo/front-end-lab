@@ -1,13 +1,13 @@
 @use '../../styles/' as *;
 
 .video {
-  margin-top: 40px;
+  // margin-top: 40px;
   grid-area: A;
   width: 100%;
 
   .iframe {
     aspect-ratio: 16/9;
     width: 100%;
-    
+    border: 1px solid $lines-gray;
   }
 }

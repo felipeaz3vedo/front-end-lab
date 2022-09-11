@@ -12,7 +12,7 @@ import api from '../services/api';
 import '../App.scss';
 
 export function Course() {
-  const { data, setData, setCurrentData } = useVideoData();
+  const { setData, setCurrentData } = useVideoData();
 
   useEffect(() => {
     api
@@ -25,7 +25,6 @@ export function Course() {
       })
       .then(response => {
         setData(response.data.items);
-        console.log(data);
 
         const formattedCurrentData = {
           title: response.data.items[0].snippet.title,
@@ -38,6 +37,7 @@ export function Course() {
       })
       .catch(err => console.log(err));
   }, []);
+
 
   return (
     <>
