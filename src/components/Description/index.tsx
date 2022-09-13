@@ -3,6 +3,8 @@ import notionIcon from '../../assets/notion-icon.svg';
 import talkIcon from '../../assets/talk-icon.svg';
 import { useVideoData } from '../../hooks/useVideoData';
 
+import { SiNotion } from 'react-icons/si';
+
 import './description.scss';
 
 export function Description() {
@@ -31,7 +33,7 @@ export function Description() {
         </div>
         <div className="description__assets">
           <a className="description__assets-extra" href="#">
-            <img src={notionIcon} alt="logomarca do notion" />
+            <SiNotion size={20} />
             material complementar
           </a>
           <a className="description__assets-talk" href="#">
