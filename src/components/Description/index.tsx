@@ -15,7 +15,10 @@ export function Description() {
       <div className="description">
         <div>
           <h2 className="description__title">
-            {currentData.position + 1}. {currentData.title}
+            {currentData.position < 10
+              ? `0${currentData.position + 1}`
+              : currentData.position + 1}
+            . {currentData.title}
           </h2>
         </div>
         <div>
