@@ -12,10 +12,10 @@ import api from '../services/api';
 import '../App.scss';
 
 export function Course() {
-  const { setData, setCurrentData } = useVideoData();
+  const { data, setData, setCurrentData } = useVideoData();
 
-  useEffect(() => {
-    api
+  const fetchData = async () => {
+    await api
       .get('/playlistItems', {
         params: {
           key: import.meta.env.VITE_API_KEY,
@@ -25,19 +25,22 @@ export function Course() {
       })
       .then(response => {
         setData(response.data.items);
-
-        const formattedCurrentData = {
+        
+        setCurrentData({
           title: response.data.items[0].snippet.title,
           position: response.data.items[0].snippet.position,
           description: response.data.items[0].snippet.description,
           videoId: response.data.items[0].snippet.resourceId.videoId
-        };
-
-        setCurrentData(formattedCurrentData);
+        });
       })
-      .catch(err => console.log(err));
-  }, []);
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>

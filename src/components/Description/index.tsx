@@ -1,5 +1,4 @@
 import professorPhoto from '../../assets/professor-photo.jpeg';
-import notionIcon from '../../assets/notion-icon.svg';
 import talkIcon from '../../assets/talk-icon.svg';
 import { useVideoData } from '../../hooks/useVideoData';
 
@@ -14,19 +13,21 @@ export function Description() {
     <>
       <div className="description">
         <div>
-          <h2 className="description__title">
+          <h1 className="description__title">
             {currentData.position < 10
               ? `0${currentData.position + 1}`
               : currentData.position + 1}
             . {currentData.title}
-          </h2>
+          </h1>
         </div>
+
         <div>
           <h3 className="description__abstract">{currentData.description}</h3>
         </div>
+
         <div className="description__professor">
           <div className="description__professor-photo">
-            <img src={professorPhoto} alt="" />
+            <img src={professorPhoto} alt="Foto de Felipe de Azevedo pessoa" />
           </div>
 
           <div className="description__professor-informations">
@@ -34,6 +35,7 @@ export function Description() {
             <p>Front-end Developer @felipeazevedo1991</p>
           </div>
         </div>
+
         <div className="description__assets">
           <a className="description__assets-extra" href="#">
             <SiNotion size={20} />

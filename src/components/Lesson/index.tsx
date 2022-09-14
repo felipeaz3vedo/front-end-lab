@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 
 import './lesson.scss';
 
-interface LessonProps {
+interface ILessonProps {
   title: string;
   position: number;
   description: string;
   videoId: string;
 }
 
-export function Lesson(props: LessonProps) {
+export function Lesson(props: ILessonProps) {
   const { setCurrentData } = useVideoData();
 
   return (

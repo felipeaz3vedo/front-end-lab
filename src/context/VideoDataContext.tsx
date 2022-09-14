@@ -11,6 +11,7 @@ interface IVideosData {
     };
   };
 }
+
 interface ICurrentVideoData {
   title: string;
   position: number;
