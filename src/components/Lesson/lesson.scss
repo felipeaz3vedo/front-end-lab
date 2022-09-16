@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px 40px;
+  padding: 2rem 4rem;
   border-bottom: 1px solid $secondary-gray-normal;
   transition: 0.3s ease;
 
@@ -14,7 +14,7 @@
   }
 
   p {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 700;
     color: $secondary-gray;
   }

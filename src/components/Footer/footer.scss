@@ -14,14 +14,14 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-block: 40px;
-  margin-left: 16px;
-  width: 440px;
-  height: 29px;
+  margin-block: 4rem;
+  margin-left: 1.6rem;
+  width: 44rem;
+  height: 2.9rem;
 }
 
 .footer__informations-logo {
-  margin-right: 24px;
+  margin-right: 2.4rem;
 
   p {
     color: $secondary-gray;
@@ -32,7 +32,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 16px;
+  margin-right: 1.6rem;
 
   svg {
     transition: 0.3s ease;
@@ -43,6 +43,6 @@ footer {
   }
 
   a:first-child {
-    margin-right: 16px;
+    margin-right: 1.6rem;
   }
 }

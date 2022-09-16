@@ -22,50 +22,62 @@
     max-width: fit-content;
 
     margin: auto;
-    border-radius: 5px;
-    padding: 32px 40px 40px 40px;
+    border-radius: 0.5rem;
+    padding: 3.2rem 4rem 4rem 4rem;
 
-    border: 1px solid $secondary-gray-normal;
+    border: 0.1rem solid $secondary-gray-normal;
   }
 
   &__logo {
-    width: 150px;
-    margin-bottom: 64px;
+    width: 15rem;
+    margin-bottom: 6.4rem;
   }
 
   &__divider {
     width: 100%;
-    height: 0.5px;
+    height: 0.05rem;
 
     background-color: $secondary-gray-normal;
 
-    margin-block: 16px;
+    margin-block: 1.6rem;
   }
 
   &__button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 0.8rem;
 
     width: 100%;
 
-    padding-block: 10px;
+    padding-block: 1rem;
 
     background-color: white;
 
-    border-radius: 4px;
+    border-radius: 0.4rem;
     border: none;
+
+    color: $gray-dark;
 
     transition: color 0.3s ease, background-color 0.3s ease;
 
-    color: $gray-dark;
+    svg {
+      path {
+        transition: fill 0.3s ease;
+      }
+    }
 
     &:hover {
       background-color: $brand-blue;
       color: $gray-light;
 
       cursor: pointer;
+
+      svg {
+        path {
+          fill: $gray-light;
+        }
+      }
     }
   }
 }

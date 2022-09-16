@@ -3,7 +3,6 @@ import { signOut } from 'firebase/auth';
 import logo from '../../assets/logo.svg';
 import { auth } from '../../config/firebase';
 import { useNavigate } from 'react-router-dom';
-import { HiLogout } from 'react-icons/hi';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 

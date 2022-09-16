@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: $background-black;
@@ -28,25 +32,25 @@ a {
 
 p {
   color: $gray-normal;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 h1 {
   color: $gray-light;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.02rem;
 }
 
 h2 {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: $gray-light-moderate;
 }
 
 h3 {
   color: $gray-normal;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 160%;
   font-weight: 400;
 }
@@ -54,7 +58,7 @@ h3 {
 h4 {
   font-family: 'Oswald', sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 2rem;
   letter-spacing: 0.06rem;
   color: $secondary-gray;
   text-transform: uppercase;
