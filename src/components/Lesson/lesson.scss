@@ -6,48 +6,16 @@
   align-items: center;
   justify-content: flex-start;
   padding: 20px 40px;
-  border-bottom: 1px solid $lines-gray;
+  border-bottom: 1px solid $secondary-gray-normal;
   transition: 0.3s ease;
 
   &:hover {
     background-color: $secondary-gray-dark;
-
-    .lesson__informations svg {
-      fill: $secondary-gray;
-    }
-  }
-
-  button {
-    border: none;
-    background: none;
-    margin-right: 16px;
-    align-self: flex-start;
-  }
-
-  h2 {
-    margin-bottom: 8px;
   }
 
   p {
     font-size: 12px;
     font-weight: 700;
     color: $secondary-gray;
-  }
-}
-
-.lesson__informations {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  span {
-    display: flex;
-    margin-right: 12px;
-    align-items: flex-start;
-
-    svg {
-      margin-right: 4px;
-      fill: $lines-gray;
-    }
   }
 }

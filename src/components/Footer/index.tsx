@@ -3,7 +3,6 @@ import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
 
 export function Footer() {
-  // ajeitar o hover dos links sociais
   return (
     <footer>
       <div className="container">
@@ -12,10 +11,13 @@ export function Footer() {
           <p>Frontend Lab - todos os direitos reservados</p>
         </div>
         <div className="footer__social-links">
-          <a href="#">
+          <a href="https://github.com/felipeaz3vedo" target="_blank">
             <BsGithub size={30} color="#8D8D99" />
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/felipe-de-azevedo/"
+            target="_blank"
+          >
             <BsLinkedin size={30} color="#8D8D99" />
           </a>
         </div>

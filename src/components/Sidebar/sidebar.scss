@@ -3,11 +3,9 @@
 .sidebar {
   grid-area: B;
 
-  // margin-top: 40px;
   background-color: $background-sidebar;
- 
 
-  border: 1px solid $lines-gray;
+  border: 1px solid $secondary-gray-normal;
   border-bottom: 0;
 
   height: auto;

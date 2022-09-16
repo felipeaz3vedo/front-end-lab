@@ -1,45 +1,48 @@
 @use '../../styles/' as *;
 
 .login {
-  img {
-    width: 200px;
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-sidebar;
+
+  &__container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+    max-width: fit-content;
+
+    margin: auto;
+    border-radius: 5px;
+    padding: 32px 40px 40px 40px;
+
+    border: 1px solid $secondary-gray-normal;
+  }
+
+  &__logo {
+    width: 150px;
     margin-bottom: 64px;
   }
 
-  h1 {
-    font-size: 24px;
-  }
-
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  background-color: $background-sidebar;
-  width: 100%;
-  height: fit-content;
-  max-width: fit-content;
-
-  margin: auto;
-  border-radius: 5px;
-  padding: 40px 40px 64px 40px;
-
   &__divider {
     width: 100%;
-    height: 1px;
+    height: 0.5px;
 
-    background-color: $lines-gray;
+    background-color: $secondary-gray-normal;
 
     margin-block: 16px;
   }
 
-  button {
+  &__button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,26 +50,21 @@
 
     width: 100%;
 
-    padding-block: 16px;
+    padding-block: 10px;
 
-    background-color: #df4930;
+    background-color: white;
 
     border-radius: 4px;
     border: none;
 
-    transition: 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
 
-    p {
-      color: $text-gray-light;
-      font-weight: 700;
-    }
-
-    svg {
-      fill: $text-gray-light;
-    }
+    color: $gray-dark;
 
     &:hover {
-      opacity: 0.7;
+      background-color: $brand-blue;
+      color: $gray-light;
+
       cursor: pointer;
     }
   }

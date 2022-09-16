@@ -3,7 +3,8 @@ import { signOut } from 'firebase/auth';
 import logo from '../../assets/logo.svg';
 import { auth } from '../../config/firebase';
 import { useNavigate } from 'react-router-dom';
-import { RiLogoutCircleRFill } from 'react-icons/ri';
+import { HiLogout } from 'react-icons/hi';
+import { AiFillCaretDown } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 
 import avatar from '../../assets/avatar.svg';
@@ -42,25 +43,22 @@ export function Header() {
             onClick={() => setIsOpen(!isOpen)}
             className="header__user-image"
           >
-            <img
-              ref={imgRef}
-              src={auth.currentUser?.photoURL || avatar}
-              width="30"
-              height="30"
-            />
+            <img ref={imgRef} src={avatar} />
+            <AiFillCaretDown />
           </div>
 
-          <div
-            className={'header__user-dropdown ' + (isOpen ? 'open' : 'closed')}
-          >
+          <div className={'header__user-dropdown ' + (isOpen && 'open')}>
             <p className="header__user-dropdown-name">
               {auth.currentUser?.displayName}
             </p>
 
             <div className="header__user-dropdown-divider"></div>
 
+            <a href="#">
+              <p>Ajuda</p>
+            </a>
+
             <a onClick={signUserOut} href="#">
-              <RiLogoutCircleRFill size={20} color="black" />
               <p>Sair</p>
             </a>
           </div>

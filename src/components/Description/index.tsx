@@ -1,8 +1,8 @@
 import professorPhoto from '../../assets/professor-photo.jpeg';
-import talkIcon from '../../assets/talk-icon.svg';
 import { useVideoData } from '../../hooks/useVideoData';
 
 import { SiNotion } from 'react-icons/si';
+import { FaDiscord } from 'react-icons/fa';
 
 import './description.scss';
 
@@ -37,12 +37,13 @@ export function Description() {
         </div>
 
         <div className="description__assets">
-          <a className="description__assets-extra" href="#">
+          <a className="description__assets-discord" href="#">
             <SiNotion size={20} />
             material complementar
           </a>
-          <a className="description__assets-talk" href="#">
-            <img src={talkIcon} alt="Icone fale comigo" />
+          <a className="description__assets-discord" href="#">
+            <FaDiscord size={20} />
+            grupo no discord
           </a>
         </div>
       </div>

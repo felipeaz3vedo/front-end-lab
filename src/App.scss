@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: $background-black;
@@ -26,25 +27,25 @@ a {
 }
 
 p {
-  color: $text-gray-normal;
+  color: $gray-normal;
   font-size: 14px;
 }
 
 h1 {
-  color: $text-gray-light;
+  color: $gray-light;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.2px;
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
-  color: #c4c4cc;
+  color: $gray-light-moderate;
 }
 
 h3 {
-  color: $text-gray-normal;
+  color: $gray-normal;
   font-size: 16px;
   line-height: 160%;
   font-weight: 400;
@@ -55,8 +56,6 @@ h4 {
   font-weight: 600;
   font-size: 20px;
   letter-spacing: 0.06rem;
-
   color: $secondary-gray;
-
   text-transform: uppercase;
 }
