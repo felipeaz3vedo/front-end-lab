@@ -18,7 +18,10 @@ body {
 }
 
 .container {
-  max-width: $container-desktop;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120rem;
   margin-inline: auto;
 }
 

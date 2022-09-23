@@ -12,7 +12,7 @@ import api from '../services/api';
 import '../App.scss';
 
 export function Course() {
-  const { data, setData, setCurrentData } = useVideoData();
+  const { setData, setCurrentData } = useVideoData();
 
   const fetchData = async () => {
     await api
@@ -25,7 +25,7 @@ export function Course() {
       })
       .then(response => {
         setData(response.data.items);
-        
+
         setCurrentData({
           title: response.data.items[0].snippet.title,
           position: response.data.items[0].snippet.position,

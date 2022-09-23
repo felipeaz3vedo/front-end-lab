@@ -10,12 +10,20 @@
   transition: 0.3s ease;
 
   &:hover {
-    background-color: $secondary-gray-dark;
+    background-color: $hover-gray;
   }
 
   p {
     font-size: 1.2rem;
     font-weight: 700;
     color: $secondary-gray;
+  }
+}
+
+.currentVideo {
+  background-color: $hover-gray;
+
+  h2 {
+    color: $brand-blue;
   }
 }

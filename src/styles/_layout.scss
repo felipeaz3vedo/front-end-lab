@@ -1,6 +1,10 @@
+@use './breakpoints/' as *;
+
 .layout {
   display: grid;
-  grid-template-columns: 3fr 38.5rem;
+  grid-template-columns: auto 38.5rem;
+
+  width: 100%;
 
   gap: 1.6rem 0;
 
@@ -9,4 +13,13 @@
     'C B';
 
   margin: 0 auto;
+
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      'A'
+      'B'
+      'C';
+  }
 }

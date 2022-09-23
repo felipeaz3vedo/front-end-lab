@@ -4,27 +4,35 @@ footer {
   border-top: 1px solid $secondary-gray-normal;
 }
 
-.container {
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 120rem;
+  margin-inline: auto;
+
+  @include responsive(mobile) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+  }
 }
 
 .footer__informations {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-block: 4rem;
-  margin-left: 1.6rem;
+  margin: 4rem 0rem 4rem 1.6rem;
+  gap: 2.4rem;
   width: 44rem;
   height: 2.9rem;
-}
 
-.footer__informations-logo {
-  margin-right: 2.4rem;
-
-  p {
-    color: $secondary-gray;
+  @include responsive(mobile) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 5rem 5rem 5rem;
   }
 }
 
@@ -34,12 +42,22 @@ footer {
   justify-content: center;
   margin-right: 1.6rem;
 
-  svg {
-    transition: 0.3s ease;
+  @include responsive(mobile) {
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
   }
 
-  svg:hover {
-    opacity: 0.5;
+  @include responsive(mobile) {
+    margin-bottom: 4rem;
+  }
+
+  svg {
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   a:first-child {

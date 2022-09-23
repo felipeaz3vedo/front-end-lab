@@ -3,7 +3,6 @@ import { signOut } from 'firebase/auth';
 import logo from '../../assets/logo.svg';
 import { auth } from '../../config/firebase';
 import { useNavigate } from 'react-router-dom';
-import { AiFillCaretDown } from 'react-icons/ai';
 import { useEffect, useRef, useState } from 'react';
 
 import avatar from '../../assets/avatar.svg';
@@ -43,10 +42,9 @@ export function Header() {
             className="header__user-image"
           >
             <img ref={imgRef} src={avatar} />
-            <AiFillCaretDown />
           </div>
 
-          <div className={'header__user-dropdown ' + (isOpen && 'open')}>
+          <div className={`header__user-dropdown ${isOpen && 'open'}`}>
             <p className="header__user-dropdown-name">
               {auth.currentUser?.displayName}
             </p>

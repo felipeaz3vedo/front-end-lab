@@ -9,6 +9,10 @@
 
   margin-left: 1.6rem;
 
+  @include responsive(mobile) {
+    margin-left: 2rem;
+  }
+
   &__abstract {
     margin: 1.6rem 3.2rem 3.2rem 0rem;
   }
@@ -45,15 +49,21 @@
 
     padding: 2.4rem 1.6rem;
 
+    width: fit-content;
     margin-bottom: 3.2rem;
-    margin-right: 3.2rem;
 
     display: flex;
     align-items: center;
     gap: 3.2rem;
+
+    margin-right: 3.2rem;
+
+    @include responsive(mobile) {
+      flex-direction: column;
+    }
   }
 
-  &__assets-discord {
+  &__assets-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,18 +77,22 @@
 
     height: 4rem;
 
-    padding: 1.2rem;
-
     border-radius: 0.4rem;
 
     font-size: 1.4rem;
     font-weight: 700;
 
+    cursor: pointer;
+
     transition: color 0.3s ease;
 
+    @include responsive(mobile) {
+      width: 31rem;
+      height: 5rem;
+    }
+
     &:hover {
-      cursor: pointer;
-      color: white;
+      color: #ffffff;
     }
   }
 }

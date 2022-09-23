@@ -1,5 +1,4 @@
 import { useVideoData } from '../../hooks/useVideoData';
-import { MdRadioButtonUnchecked } from 'react-icons/md';
 
 import { Link } from 'react-router-dom';
 
@@ -13,12 +12,14 @@ interface ILessonProps {
 }
 
 export function Lesson(props: ILessonProps) {
-  const { setCurrentData } = useVideoData();
+  const { currentData, setCurrentData } = useVideoData();
 
   return (
     <Link
       to={`/course/lesson/${props.videoId}`}
-      className="lesson"
+      className={`lesson ${
+        currentData.videoId === props.videoId && 'currentVideo'
+      }`}
       onClick={() => setCurrentData(props)}
     >
       <div>

@@ -37,11 +37,11 @@ export function Description() {
         </div>
 
         <div className="description__assets">
-          <a className="description__assets-discord" href="#">
+          <a className="description__assets-button" href="#">
             <SiNotion size={20} />
             material complementar
           </a>
-          <a className="description__assets-discord" href="#">
+          <a className="description__assets-button" href="#">
             <FaDiscord size={20} />
             grupo no discord
           </a>
