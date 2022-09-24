@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../config/firebase';
 
+import { FiLogOut } from 'react-icons/fi';
+import { BiHelpCircle } from 'react-icons/bi';
+
 import './header.scss';
 
 import avatar from '../../assets/avatar.svg';
@@ -54,10 +57,12 @@ export function Header() {
             <div className="header__user-dropdown-divider"></div>
 
             <a href="#">
+              <BiHelpCircle size={20} color="0096fb" />
               <p>Ajuda</p>
             </a>
 
             <a onClick={signUserOut} href="#">
+              <FiLogOut size={18} color="0096fb" />
               <p>Sair</p>
             </a>
           </div>

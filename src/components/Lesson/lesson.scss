@@ -13,6 +13,12 @@
     background-color: $hover-gray;
   }
 
+  @include responsive(mobile) {
+    &:hover {
+      background-color: $sidebar-color;
+    }
+  }
+
   p {
     font-size: 1.2rem;
     font-weight: 700;

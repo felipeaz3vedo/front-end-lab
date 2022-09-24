@@ -54,11 +54,11 @@
     display: none;
     flex-direction: column;
 
-    width: 18rem;
+    width: 20rem;
 
     border: 1px solid $secondary-gray-normal;
 
-    background: black;
+    background: #000000;
 
     border-radius: 0.2rem;
     box-shadow: rgb(0 0 0 / 60%) 0rem 0.5rem 2rem;
@@ -67,7 +67,7 @@
     visibility: hidden;
 
     .header__user-dropdown-name {
-      padding: 1.6rem 1.6rem 0.8rem 1.6rem;
+      padding: 1.6rem 3rem;
       font-weight: 500;
     }
 
@@ -86,13 +86,19 @@
       align-items: center;
       gap: 1.6rem;
 
-      padding: 0.8rem 1.6rem;
+      padding: 1.6rem 3rem;
 
       transition: background-color;
 
       &:hover {
         background-color: $hover-gray;
         cursor: pointer;
+      }
+
+      @include responsive(mobile) {
+        &:hover {
+          background-color: #000000;
+        }
       }
     }
   }

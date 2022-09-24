@@ -10,11 +10,15 @@
   margin-left: 1.6rem;
 
   @include responsive(mobile) {
-    margin-left: 2rem;
+    margin-inline: 2rem;
   }
 
   &__abstract {
     margin: 1.6rem 3.2rem 3.2rem 0rem;
+
+    @include responsive(mobile) {
+      margin-block: 3.2rem;
+    }
   }
 
   &__professor {
@@ -61,7 +65,7 @@
     @include responsive(mobile) {
       flex-direction: column;
       justify-content: center;
-      margin-inline: auto
+      margin-inline: auto;
     }
   }
 
