@@ -13,7 +13,7 @@ reprovação/desistência no módulo básico(em torno de 50%), (2) a documentaç
 ## 🤓 Habilidades desenvolvidas com esse projeto
 - Utilização da context API com Typescript;
 - Autenticação utilizando o Firebase;
-- Criação de rotas protejidas com React Router Dom;
+- Criação de rotas protegidas com React Router Dom;
 - Utilização da API do youtube;
 - Requisições utilizando AXIOS.
 
