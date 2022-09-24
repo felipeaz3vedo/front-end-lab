@@ -1,4 +1,5 @@
 import { Lesson } from '../Lesson';
+
 import { useVideoData } from '../../hooks/useVideoData';
 
 import './sidebar.scss';

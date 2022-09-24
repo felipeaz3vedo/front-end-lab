@@ -1,11 +1,13 @@
-import './header.scss';
-import { signOut } from 'firebase/auth';
-import logo from '../../assets/logo.svg';
-import { auth } from '../../config/firebase';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 
+import { signOut } from 'firebase/auth';
+import { auth } from '../../config/firebase';
+
+import './header.scss';
+
 import avatar from '../../assets/avatar.svg';
+import logo from '../../assets/logo.svg';
 
 export function Header() {
   const imgRef = useRef<HTMLImageElement>(null);

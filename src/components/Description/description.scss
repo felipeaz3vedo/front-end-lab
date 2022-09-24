@@ -60,6 +60,8 @@
 
     @include responsive(mobile) {
       flex-direction: column;
+      justify-content: center;
+      margin-inline: auto
     }
   }
 

@@ -1,6 +1,6 @@
-import professorPhoto from '../../assets/professor-photo.jpeg';
 import { useVideoData } from '../../hooks/useVideoData';
 
+import professorPhoto from '../../assets/professor-photo.jpeg';
 import { SiNotion } from 'react-icons/si';
 import { FaDiscord } from 'react-icons/fa';
 
