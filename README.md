@@ -5,7 +5,7 @@
 ## ℹ️ Informações sobre o projeto
 [projeto pessoal] Plataforma desenvolvida com o objetivo de complementar o material didático da materia lógica de progração do 
 curso técnico de T.I da Universidade Federal do Rio Grande do Norte. Essa iniciativa surgiu devido a 3 fatores: (1) taxa muito elevada de
-reprovação/desistência no módulo básico(em torno de 50%), a documentação da pseudolinguagem escolhida na matéria de lógica de programação não está completo e (3) a falta de recursos audiovisuais no material didático dessa disciplina.
+reprovação/desistência no módulo básico(em torno de 50%), (2) a documentação da pseudolinguagem escolhida na matéria de lógica de programação não está completa e (3) a falta de recursos audiovisuais no material didático dessa disciplina.
 <p>OBS: As aulas serão adicionadas em breve.</p>
 
 &nbsp;
